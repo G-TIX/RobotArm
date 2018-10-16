@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+var verkeerslicht = 'groen';
+var auto = 'stop';
+var klok = 0;
+
+while(verkeerslicht == 'groen') {
+  auto = 'rij';
+  klok++;
+
+  if(klok == 10){
+    klok = 0;
+    verkeerslicht = 'rood';
+    auto = 'stop';
+  }
+  console.log('verkeerslicht' + verkeerslicht);
+  console.log('autowaarde' + auto);
+  console.log('verkeerslicht staat' + klok + 'op groen');
+}
+
+
+
+        </script>
+    </body>
+</html>
